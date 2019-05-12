@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Post
 
 def homepage(request):
-    return HttpResponse("Hi!")
+    return render(request,
+                  "main/homepage.html",
+                  {"posts": Post.objects.all()})

@@ -1,0 +1,15 @@
+<head>
+	<title>StenStudios - Create.Innovate.Blog.</title>
+	{% load static %}
+	<link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+</head>
+<body>
+	{% for p in posts %}
+		{{p.title}}
+		{{p.content|safe}}
+		{{p.date}}
+		<br><br>
+	{% endfor %}
+</body>
+
+<script src="{% static 'tinymce/js/prism.js' %}"></script>
