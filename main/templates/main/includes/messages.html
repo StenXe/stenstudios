@@ -1,0 +1,13 @@
+{% if messages %}
+	{% for message in messages %}
+		{% if message.tags == 'success' %}
+			<script>M.toast({html: "{{ message }}", classes: 'green rounded'})</script>
+		{% endif %}
+		{% if message.tags == 'error' %}
+			<script>M.toast({html: "{{ message }}", classes: 'rounded red'})</script>
+		{% endif %}
+		{% if message.tags == 'info' %}
+			<script>M.toast({html: "{{ message }}", classes: 'rounded'})</script>
+		{% endif %}
+	{% endfor %}
+{% endif %}

@@ -1,14 +1,14 @@
 {% extends "main/header.html" %}	
 
 {% block content %}
-	<form action="POST">
+	<form method="POST">
 		{% csrf_token %}
 
 		{{ form.as_p }}
 		<br>
 		<br>
 		<center>
-			<button class="btn waves-effect waves-light" type="submit" name="action">Register<i class="material-icons right">send</i></button>
+			<button class="btn waves-effect waves-light" type="submit">Register<i class="material-icons right">send</i></button>
 		</center>
 	</form>
 	
