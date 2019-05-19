@@ -8,10 +8,10 @@
 				<div class="card-content white-text">
 				  <span class="card-title">{{ p.title }}</span>
 				  <p style="font-size:70%">{{ p.date }}</p>
-				  <p>{{ p.content|safe }}</p>
+				  <p>{{ p.summary|safe }}</p>
 				</div>
 				<div class="card-action">
-				  <a href="#">View</a>
+				  <a href="{{ p.post_url }}">View</a>
 				</div>
 			  </div>
 			</div>

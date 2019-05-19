@@ -1,0 +1,16 @@
+{% extends "main/header.html" %}	
+
+{% block content %}
+	<form method="POST">
+		{% csrf_token %}
+
+		{{ form.as_p }}
+		<br>
+		<br>
+		<center>
+			<button class="btn waves-effect waves-light" type="submit">Login<i class="material-icons right">send</i></button>
+		</center>
+	</form>
+	
+	If you don't have an account, <a href="/register" >register</a> instead.
+{% endblock %}

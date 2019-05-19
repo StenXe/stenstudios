@@ -7,6 +7,8 @@ class PostAdmin(admin.ModelAdmin):
 
     fieldsets = [
             ("Title & Date", {"fields": ["title", "date"]}),
+            ("URL", {"fields": ["post_url"]}),
+            ("TL;DR", {"fields": ["summary"]}),
             ("Content", {"fields": ["content"]})
         ]
 
